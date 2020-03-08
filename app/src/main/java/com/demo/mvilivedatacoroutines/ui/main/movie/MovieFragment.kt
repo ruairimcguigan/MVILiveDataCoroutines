@@ -1,4 +1,4 @@
-package com.demo.mvilivedatacoroutines.ui.main
+package com.demo.mvilivedatacoroutines.ui.main.movie
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.demo.mvilivedatacoroutines.R
 
-class MainFragment : Fragment() {
+class MovieFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = MovieFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: MoviesViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -23,7 +23,7 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(MoviesViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

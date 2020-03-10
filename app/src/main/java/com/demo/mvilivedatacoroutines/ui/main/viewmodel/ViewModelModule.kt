@@ -1,7 +1,8 @@
-package com.demo.mvilivedatacoroutines.ui.main.base
+package com.demo.mvilivedatacoroutines.ui.main.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.demo.mvilivedatacoroutines.ui.main.base.ViewModelKey
 import com.demo.mvilivedatacoroutines.ui.main.movie.MoviesViewModel
 import dagger.Binds
 import dagger.Module
@@ -11,7 +12,7 @@ import dagger.multibindings.IntoMap
 abstract class ViewModelModule {
 
     @Binds
-    internal abstract fun bindViewModelFactory(factory: BaseViewModelFactory): ViewModelProvider.Factory
+    internal abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
     @Binds
     @IntoMap

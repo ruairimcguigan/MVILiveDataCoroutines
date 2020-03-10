@@ -4,7 +4,10 @@ import com.demo.mvilivedatacoroutines.ui.main.viewmodel.ViewModelFactory
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-abstract class BaseView : DaggerFragment() {
+abstract class BaseFragment: DaggerFragment() {
 
-    @Inject lateinit var viewModel: ViewModelFactory
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
+
+    protected abstract fun render(state: BaseViewState)
 }

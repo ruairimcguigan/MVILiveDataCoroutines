@@ -1,4 +1,4 @@
-package com.demo.mvilivedatacoroutines.ui.main.base
+package com.demo.mvilivedatacoroutines.ui.main.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider.Factory
@@ -8,7 +8,7 @@ import javax.inject.Singleton
 
 @Suppress("UNCHECKED_CAST")
 @Singleton
-class BaseViewModelFactory @Inject constructor(
+class ViewModelFactory @Inject constructor(
     private val viewModels: MutableMap<Class<out ViewModel>, Provider<ViewModel>>) : Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T = viewModels[modelClass]?.get() as T

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MVILiveDataCoroutines</string>
+    <string name="movies_release_date">Release Date: %s</string>
+    <string name="menu_item_movies">Movies</string>
+    <string name="menu_item_shows">Shows</string>
+    <string name="menu_item_celebrities">Celebrities</string>
 </resources>
